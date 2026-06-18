@@ -683,6 +683,13 @@ main {
   line-height: 1;
   margin-bottom: 1rem;
 }
+
+.contact-hero h1 em {
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(26,111,255,0.6);
+}
+
 .contact-hero p {
   font-family: var(--sans);
   color: var(--text-dim);
