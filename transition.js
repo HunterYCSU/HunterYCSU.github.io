@@ -44,3 +44,22 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.add('active');
   }
 });
+
+const burger = document.querySelector('.nav-burger');
+const drawer = document.querySelector('.nav-drawer');
+const scrim  = document.querySelector('.nav-scrim');
+
+function closeDrawer() {
+  burger.classList.remove('open');
+  drawer.classList.remove('open');
+  scrim.classList.remove('open');
+}
+
+if (burger) {
+  burger.addEventListener('click', () => {
+    const isOpen = drawer.classList.contains('open');
+    isOpen ? closeDrawer() : (burger.classList.add('open'), drawer.classList.add('open'), scrim.classList.add('open'));
+  });
+}
+if (scrim) scrim.addEventListener('click', closeDrawer);
+document.querySelectorAll('.nav-drawer a').forEach(a => a.addEventListener('click', closeDrawer));
