@@ -18,7 +18,7 @@
     y:  Math.random() * 1,
     ox: Math.random() * Math.PI * 2,
     oy: Math.random() * Math.PI * 2,
-    s:  0.00008 + Math.random() * 0.00006,
+    s:  0.0001 + Math.random() * 0.000075,
   }));
 
   let t = 0;
