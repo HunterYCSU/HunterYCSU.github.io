@@ -38,7 +38,7 @@
         const dx = pts[i].x - pts[j].x;
         const dy = pts[i].y - pts[j].y;
         const d  = Math.hypot(dx, dy);
-        const maxD = W * 0.3;
+        const maxD = Math.max(W, H) * 0.3;
         if (d > maxD) continue;
         const alpha = (1 - d / maxD) * 0.35;
         ctx.beginPath();
