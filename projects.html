@@ -4,187 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Hunter Su</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="icon.png" />
 </head>
 <body>
-
-  <div class="cursor"></div>
   <canvas id="bg-canvas"></canvas>
   <div id="page-transition"></div>
 
-  <nav>
-    <a href="index.html" class="nav-logo" data-transition>HS<span>.dev</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
-    <button class="nav-burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <div class="wrap" style="align-items: flex-start; padding-top: 5rem;">
+    <div class="page-inner">
+      <a href="index.html" class="back" data-t>← Back</a>
 
-  <div class="nav-scrim"></div>
-  <div class="nav-drawer">
-    <ul>
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
+      <p class="page-title">Projects</p>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Honours Thesis</span>
+          <span class="project-year">2025 - 2026</span>
+        </div>
+        <p class="project-desc">
+          Investigating how Interaction Design methods can be integrated into
+          Requirements Engineering to better capture end-user needs in enterprise
+          environments. Empirical research with industry practitioners. Supervised
+          by Stephen Viller, UQ.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">HCI</span>
+          <span class="ptag">Requirements Engineering</span>
+          <span class="ptag">Interaction Design</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Real Estate CRM</span>
+          <span class="project-year">2025</span>
+        </div>
+        <p class="project-desc">
+          Production CRM platform at Cyberlark. Built a Trello-style kanban board
+          backed by DynamoDB with drag-and-drop ordering and a GSI for native sorting.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">React</span>
+          <span class="ptag">AWS</span>
+          <span class="ptag">DynamoDB</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Trainforge</span>
+          <span class="project-year">2024</span>
+        </div>
+        <p class="project-desc">
+          Full-stack SaaS for personal trainers. Client management, appointment
+          scheduling, AI workout generation with LangChain, deployed with Nginx
+          and Gunicorn.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Django</span>
+          <span class="ptag">MySQL</span>
+          <span class="ptag">LangChain</span>
+          <span class="ptag">Bootstrap 5</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">EcoCache</span>
+          <span class="project-year">2024</span>
+        </div>
+        <p class="project-desc">
+          Gamified web platform encouraging interaction with nature. Six-person
+          team, React and JSX frontend.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">React</span>
+          <span class="ptag">JSX</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Clash of Clankers</span>
+          <span class="project-year">2023</span>
+        </div>
+        <p class="project-desc">
+          42-person team game built in Java with LibGDX. Developed HUD elements
+          including dynamic health display and interface screens.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Java</span>
+          <span class="ptag">LibGDX</span>
+        </div>
+      </div>
+
+      <div style="height: 4rem;"></div>
+    </div>
   </div>
 
-  <main>
-    <div class="page-content">
-
-      <section class="section projects-hero">
-        <div class="section-tag">What I've Built</div>
-        <h1>Selected<br/><span>Projects</span></h1>
-      </section>
-
-      <section class="section" style="padding-top: 0;">
-        <div class="projects-grid">
-
-          <!-- Featured: Thesis -->
-          <div class="project-card featured-card">
-            <div>
-              <div class="featured-card-badge">In Progress · Honours Thesis</div>
-              <div class="project-title">Requirements Engineering meets Interaction Design</div>
-              <div class="project-desc">
-                Investigating how Interaction Design methods can be integrated into
-                Requirements Engineering to better capture end-user needs in enterprise
-                environments. Applying Human-Centred Computing to identify gaps between
-                stakeholder expectations and design practice. Conducting empirical
-                research with industry practitioners.
-              </div>
-              <div class="project-tags">
-                <span class="tag">HCI</span>
-                <span class="tag">Requirements Engineering</span>
-                <span class="tag">Interaction Design</span>
-                <span class="tag">Empirical Research</span>
-              </div>
-            </div>
-            <div style="display:flex; flex-direction:column; gap:1rem;">
-              <div style="background:var(--surface-2); border:1px solid var(--border); padding:1.5rem;">
-                <div style="font-family:var(--mono); font-size:0.6rem; color:var(--blue); margin-bottom:0.5rem; letter-spacing:0.1em;">RESEARCH QUESTION</div>
-                <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.7; font-style:italic;">
-                  "How can Interaction Design methods be integrated into Requirements Engineering practice to better capture end-user needs in enterprise software projects?"
-                </div>
-              </div>
-              <div style="background:var(--surface-2); border:1px solid var(--border); padding:1.5rem;">
-                <div style="font-family:var(--mono); font-size:0.6rem; color:var(--blue); margin-bottom:0.5rem; letter-spacing:0.1em;">SUPERVISOR</div>
-                <div style="font-size:0.82rem; color:var(--text-dim);">Stephen Viller · UQ EAIT</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cyberlark CRM -->
-          <div class="project-card">
-            <div class="project-number">01</div>
-            <div class="project-title">Real Estate CRM Platform</div>
-            <div class="project-desc">
-              Built full-stack features for a production CRM. Implemented a Trello-style
-              kanban board backed by DynamoDB with drag-and-drop card ordering and a
-              custom GSI for native DynamoDB sorting.
-            </div>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">AWS</span>
-              <span class="tag">DynamoDB</span>
-              <span class="tag">Node.js</span>
-            </div>
-          </div>
-
-          <!-- Trainforge -->
-          <div class="project-card">
-            <div class="project-number">02</div>
-            <div class="project-title">Trainforge</div>
-            <div class="project-desc">
-              Full-stack SaaS platform for personal trainers. Client management,
-              appointment scheduling with calendar, personalised training programs,
-              and an AI workout generator. Deployed with Nginx and Gunicorn.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Django</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Bootstrap 5</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">HTMX</span>
-              <span class="tag">Nginx</span>
-            </div>
-          </div>
-
-
-          <!-- TicketTailor -->
-          <div class="project-card">
-            <div class="project-number">03</div>
-            <div class="project-title">TicketTailor Microservices</div>
-            <div class="project-desc">
-              Microservices architecture for an event ticketing system. Responsible for
-              RSVP and Tickets API endpoints. Deployed to AWS ECS Fargate with RDS
-              PostgreSQL and an Application Load Balancer using Terraform.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Flask</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Terraform</span>
-              <span class="tag">ECS Fargate</span>
-            </div>
-          </div>
-
-          <!-- EcoCache -->
-          <div class="project-card">
-            <div class="project-number">04</div>
-            <div class="project-title">EcoCache</div>
-            <div class="project-desc">
-              Gamified web platform encouraging people to discover and interact with
-              nature. Built in a six-person team with React and JSX, focusing on
-              dynamic components and responsive architecture.
-            </div>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">JSX</span>
-              <span class="tag">Team Project</span>
-            </div>
-          </div>
-
-          <!-- Clash of Clankers -->
-          <div class="project-card">
-            <div class="project-number">05</div>
-            <div class="project-title">Clash of Clankers</div>
-            <div class="project-desc">
-              Contributed to a 42-person development team building a game in Java with
-              LibGDX. Developed HUD elements including dynamic health display and
-              interface screens. Large-scale Git workflow.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">LibGDX</span>
-              <span class="tag">Game Dev</span>
-              <span class="tag">Large Team</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-left">© 2025 Hunter Su</div>
-    <div class="footer-right">
-      <a href="https://linkedin.com/in/hunterycsu" target="_blank">LinkedIn</a>
-      <a href="https://github.com/hunterycsu" target="_blank">GitHub</a>
-      <a href="mailto:hunter.yicong.su@gmail.com">Email</a>
-    </div>
-  </footer>
-
-  <script src="transition.js"></script>
   <script src="background.js"></script>
+  <script src="transition.js"></script>
 </body>
 </html>

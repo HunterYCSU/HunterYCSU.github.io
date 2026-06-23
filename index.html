@@ -3,110 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hunter Su - Software Engineer</title>
+  <title>Hunter Su</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="icon.png" />
 </head>
 <body>
-
-  <!-- Cursor -->
-  <div class="cursor"></div>
-
-  <!-- Animated background -->
   <canvas id="bg-canvas"></canvas>
-
-  <!-- Page transition overlay -->
   <div id="page-transition"></div>
 
-  <!-- Nav -->
-  <nav>
-    <a href="index.html" class="nav-logo" data-transition>HS<span>.dev</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
-    <button class="nav-burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <div class="wrap">
+    <div class="inner">
+      <p class="name">Hunter Su</p>
+      <p class="tagline">Software Engineer · Brisbane, AU</p>
 
-  <div class="nav-scrim"></div>
-  <div class="nav-drawer">
-    <ul>
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
+      <ul class="nav-list">
+        <li><a href="about.html" data-t>About</a></li>
+        <li><a href="projects.html" data-t>Projects</a></li>
+        <li><a href="Yicong (Hunter) Su Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+
+      <div class="ext-links">
+        <a href="https://github.com/hunterycsu" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/hunterycsu" target="_blank">LinkedIn</a>
+        <a href="mailto:hunter.yicong.su@gmail.com">Email</a>
+      </div>
+    </div>
   </div>
 
-  <main>
-    <div class="page-content">
-
-      <!-- HERO -->
-      <section style="position:relative;">
-        <div class="hero">
-          <div class="hero-left">
-            <div class="hero-eyebrow">Software Engineer · Brisbane, AU</div>
-            <h1 class="hero-name">
-              <span class="line-1">Hunter</span>
-              <span class="line-2">Su</span>
-            </h1>
-            <p class="hero-desc">
-              Final-year Software Engineering student at UQ. Currently working on full-stack features for a real estate CRM 
-              platform and an honours thesis investigating the intersection of Requirements Engineering and Interaction Design.
-            </p>
-            <div class="hero-cta">
-              <a href="projects.html" class="btn btn-primary" data-transition>View Projects →</a>
-              <a href="about.html"    class="btn btn-outline"  data-transition>About Me</a>
-              <a href="Yicong (Hunter) Su Resume.pdf" target="_blank" class="btn btn-outline">
-                Resume ↗
-              </a>
-            </div>
-          </div>
-
-          <div class="hero-right">
-            <div class="stat-cluster">
-              <div class="stat-block live">
-                <div class="stat-label">Current Role</div>
-                <div class="stat-value">Full-stack Intern</div>
-                <div class="stat-sub">Cyberlark · Brisbane, AU</div>
-              </div>
-              <div class="stat-block">
-                <div class="stat-label">Degree</div>
-                <div class="stat-value">BEng (Hons) Software</div>
-                <div class="stat-sub">University of Queensland · 2026</div>
-              </div>
-              <div class="stat-block">
-                <div class="stat-label">Research</div>
-                <div class="stat-value">Honours Thesis</div>
-                <div class="stat-sub">RE meets Interaction Design</div>
-              </div>
-              <div class="stat-block">
-                <div class="stat-label">Languages</div>
-                <div class="stat-value">EN · 普通话 · 粵語</div>
-                <div class="stat-sub">English · Mandarin · Cantonese</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-left">© 2025 Hunter Su</div>
-    <div class="footer-right">
-      <a href="https://linkedin.com/in/hunterycsu" target="_blank">LinkedIn</a>
-      <a href="https://github.com/hunterycsu" target="_blank">GitHub</a>
-      <a href="mailto:hunter.yicong.su@gmail.com">Email</a>
-    </div>
-  </footer>
-
-  <script src="transition.js"></script>
   <script src="background.js"></script>
+  <script src="transition.js"></script>
 </body>
 </html>

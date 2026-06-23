@@ -4,159 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Hunter Su</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="icon.png" />
 </head>
 <body>
-
-  <div class="cursor"></div>
   <canvas id="bg-canvas"></canvas>
   <div id="page-transition"></div>
 
-  <nav>
-    <a href="index.html" class="nav-logo" data-transition>HS<span>.dev</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
-    <button class="nav-burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <div class="wrap" style="align-items: flex-start; padding-top: 5rem;">
+    <div class="page-inner">
+      <a href="index.html" class="back" data-t>← Back</a>
 
-  <div class="nav-scrim"></div>
-  <div class="nav-drawer">
-    <ul>
-      <li><a href="index.html"    data-transition>Home</a></li>
-      <li><a href="about.html"    data-transition>About</a></li>
-      <li><a href="projects.html" data-transition>Projects</a></li>
-      <li><a href="contact.html"  data-transition>Contact</a></li>
-    </ul>
+      <p class="page-title">About</p>
+
+      <div class="about-text">
+        <p>
+          Final-year Software Engineering student at the University of Queensland,
+          graduating November 2026. I have experience with cloud-native software 
+          development, HCI, and requirements engineering. I'm particularly interested in AI-enabled 
+          digital transformation in enterprise contexts.
+        </p>
+        <p>
+          Currently a full-stack intern at Cyberlark building a real estate CRM with
+          React and AWS. My honours thesis investigates whether Interaction Design
+          methods can make Requirements Engineering better for users in enterprise
+          settings, supervised by Stephen Viller at UQ.
+        </p>
+        <p>
+          I speak English, Mandarin, and Cantonese. Outside of code I follow cars and
+          motorsport, play games, work out, and eat a lot.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-label">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">Cyberlark</span>
+          <span class="exp-date">Aug 2025 - Present</span>
+        </div>
+        <div class="exp-role">Full-stack Intern · Brisbane, AU</div>
+        <ul class="exp-points">
+          <li>Full-stack features for a real estate CRM using AWS and React</li>
+          <li>DynamoDB-backed Trello-style kanban board with drag-and-drop ordering</li>
+          <li>GSI implementation for native DynamoDB sorting</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">Moustache Republic</span>
+          <span class="exp-date">Jan 2025 - Feb 2025</span>
+        </div>
+        <div class="exp-role">Front-end Intern · Auckland, NZ</div>
+        <ul class="exp-points">
+          <li>React components with JSX and Tailwind CSS</li>
+          <li>Component-based UI for e-commerce platforms</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">10thDan</span>
+          <span class="exp-date">Jun 2024 - Jul 2024</span>
+        </div>
+        <div class="exp-role">Front-end Intern · Remote (Melbourne)</div>
+        <ul class="exp-points">
+          <li>Front-end features using Angular</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-company">University of Queensland</span>
+          <span class="exp-date">Jul 2023 - Nov 2023</span>
+        </div>
+        <div class="exp-role">Mentor · Brisbane, AU</div>
+        <ul class="exp-points">
+          <li>Academic and career guidance for first-year EAIT students</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-label">Stack</div>
+      <div class="skills-wrap">
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">C</span>
+        <span class="skill">HTML/CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Angular</span>
+        <span class="skill">Django</span>
+        <span class="skill">AWS</span>
+        <span class="skill">DynamoDB</span>
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Terraform</span>
+        <span class="skill">Git</span>
+        <span class="skill">Nginx</span>
+      </div>
+
+      <div style="height: 4rem;"></div>
+    </div>
   </div>
 
-  <main>
-    <div class="page-content">
-
-      <!-- ABOUT HERO -->
-      <section class="section about-hero">
-        <div class="section-tag">Who I Am</div>
-        <div class="about-grid">
-
-          <div class="about-left">
-            <h1>Software <em>Engineer</em></h1>
-            <p>
-              I'm a final-year Software Engineering student at the University of Queensland,
-              graduating Nov 2026. I am interested in user centered design and development of software products, 
-              and how to make software development more human centred. 
-            </p>
-            <p>
-              Currently a full-stack intern at Cyberlark, building a real estate CRM with
-              React and AWS. My honours thesis looks into whether Interaction Design methods
-              can make Requirements Engineering better in enterprise settings.
-            </p>
-            <p>
-              I speak English, Mandarin, and Cantonese. Outside of code I'm into cars and motorsport, 
-              gaming, working out, and trying new food - I'm a bit of a foodie :D
-            </p>
-            <div class="interests">
-              <div class="interest-tag"><span class="icon">🚗</span> Cars &amp; Motorsport</div>
-              <div class="interest-tag"><span class="icon">🎮</span> Gaming</div>
-              <div class="interest-tag"><span class="icon">🏋️</span> Working out</div>
-              <div class="interest-tag"><span class="icon">🍖</span> Food</div>
-              <div class="interest-tag"><span class="icon">🌏</span> Trilingual: EN · ZH · 粵</div>
-            </div>
-          </div>
-
-          <div class="about-right">
-            <div class="section-tag">Experience</div>
-            <div class="timeline">
-
-              <div class="timeline-item">
-                <div class="timeline-date">Aug 2025 - Present</div>
-                <div class="timeline-company">Cyberlark</div>
-                <div class="timeline-role">Full-stack Intern · Brisbane, AU</div>
-                <ul class="timeline-points">
-                  <li>Built full-stack features for a real estate CRM using AWS and React</li>
-                  <li>Maintained DynamoDB-backed Trello-style board with drag-and-drop ordering</li>
-                  <li>Implemented GSI for native DynamoDB sorting</li>
-                  <li>Agile workflow, Git, and regular code reviews</li>
-                </ul>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-date">Jan 2025 - Feb 2025</div>
-                <div class="timeline-company">Moustache Republic</div>
-                <div class="timeline-role">Front-end Intern · Auckland, NZ</div>
-                <ul class="timeline-points">
-                  <li>Developed React web app components with JSX and Tailwind CSS</li>
-                  <li>Component-based UI development for e-commerce platforms</li>
-                </ul>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-date">Jun 2024 - Jul 2024</div>
-                <div class="timeline-company">10thDan</div>
-                <div class="timeline-role">Front-end Intern · Remote (Melbourne)</div>
-                <ul class="timeline-points">
-                  <li>Developed front-end features using the Angular framework</li>
-                </ul>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-date">Jul 2023 - Nov 2023</div>
-                <div class="timeline-company">University of Queensland</div>
-                <div class="timeline-role">Mentor · Brisbane, AU</div>
-                <ul class="timeline-points">
-                  <li>Academic and career guidance for first-year EAIT students</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="skills-section">
-        <div class="section">
-          <div class="section-tag">Tech Stack</div>
-          <div class="skills-grid">
-            <div class="skill-chip">Python</div>
-            <div class="skill-chip">Java</div>
-            <div class="skill-chip">JavaScript</div>
-            <div class="skill-chip">C</div>
-            <div class="skill-chip">React</div>
-            <div class="skill-chip">Django</div>
-            <div class="skill-chip">Angular</div>
-            <div class="skill-chip">Bootstrap 5</div>
-            <div class="skill-chip">AWS</div>
-            <div class="skill-chip">DynamoDB</div>
-            <div class="skill-chip">PostgreSQL</div>
-            <div class="skill-chip">MySQL</div>
-            <div class="skill-chip">Terraform</div>
-            <div class="skill-chip">Docker</div>
-            <div class="skill-chip">Nginx</div>
-            <div class="skill-chip">Git</div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-left">© 2025 Hunter Su</div>
-    <div class="footer-right">
-      <a href="https://linkedin.com/in/hunterycsu" target="_blank">LinkedIn</a>
-      <a href="https://github.com/hunterycsu" target="_blank">GitHub</a>
-      <a href="mailto:hunter.yicong.su@gmail.com">Email</a>
-    </div>
-  </footer>
-
-  <script src="transition.js"></script>
   <script src="background.js"></script>
+  <script src="transition.js"></script>
 </body>
 </html>
