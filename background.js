@@ -29,7 +29,7 @@
   const totalPairs = (COUNT * (COUNT - 1)) / 2;
   for (let i = 0; i < totalPairs; i++) {
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('stroke', 'rgba(80,80,76,1)');
+    line.setAttribute('stroke', 'rgba(180,180,176,1)');
     svg.appendChild(line);
     lines.push(line);
   }

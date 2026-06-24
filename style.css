@@ -1,10 +1,10 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg:      #e4e4e0;
-  --ink:     #111111;
-  --muted:   #999999;
-  --faint:   #c8c8c4;
+  --bg:      #1a1a18;
+  --ink:     #f0f0ec;
+  --muted:   #666662;
+  --faint:   #2e2e2a;
   --font:    Arial, Helvetica, sans-serif;
 }
 
@@ -198,7 +198,7 @@ html, body {
 }
 .exp-points li {
   font-size: 0.78rem;
-  color: #555;
+  color: #aaa;
   line-height: 1.6;
   padding-left: 0.9rem;
   position: relative;
@@ -249,7 +249,7 @@ html, body {
 }
 .project-desc {
   font-size: 0.78rem;
-  color: #555;
+  color: #aaa;
   line-height: 1.65;
   margin-bottom: 0.6rem;
 }
