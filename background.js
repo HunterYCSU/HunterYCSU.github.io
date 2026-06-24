@@ -1,56 +1,75 @@
 (function () {
-  const canvas = document.getElementById('bg-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H;
+  const existing = document.getElementById('bg-canvas');
+  if (existing) existing.remove();
 
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('id', 'bg-canvas');
+  svg.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;';
+  document.body.prepend(svg);
+
+  const COUNT = 25;
+  let W, H, points;
+
+  function init() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    points = Array.from({ length: COUNT }, (_, i) => ({
+      x:  (i % 4) / 3 + (Math.random() - 0.5) * 0.15,
+      y:  Math.floor(i / 4) / 3 + (Math.random() - 0.5) * 0.15,
+      ox: Math.random() * Math.PI * 2,
+      oy: Math.random() * Math.PI * 2,
+      s:  0.0002 + Math.random() * 0.00015,
+    }));
   }
-  window.addEventListener('resize', resize);
-  resize();
 
-  // sparse set of points that drift very slowly
-  const COUNT  = 25;
-  const points = Array.from({ length: COUNT }, () => ({
-    x:  Math.random() * 1,
-    y:  Math.random() * 1,
-    ox: Math.random() * Math.PI * 2,
-    oy: Math.random() * Math.PI * 2,
-    s:  0.0001 + Math.random() * 0.000075,
-  }));
+  window.addEventListener('resize', () => { W = window.innerWidth; H = window.innerHeight; });
+
+  // pre-create line elements for every pair
+  const lines = [];
+  const totalPairs = (COUNT * (COUNT - 1)) / 2;
+  for (let i = 0; i < totalPairs; i++) {
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('stroke', 'rgba(80,80,76,1)');
+    svg.appendChild(line);
+    lines.push(line);
+  }
 
   let t = 0;
   function draw() {
-    ctx.clearRect(0, 0, W, H);
-
-    // resolve current positions
+    const zoom = window.devicePixelRatio || 1;
+    const strokeW = zoom > 1.5 ? 3.5 / zoom : 1.5;
     const pts = points.map(p => ({
       x: (p.x + Math.sin(t * p.s + p.ox) * 0.35) * W,
       y: (p.y + Math.cos(t * p.s + p.oy) * 0.30) * H,
     }));
 
-    // draw lines between all pairs
-    ctx.lineWidth = 0.8;
+    const maxD = Math.max(W, H) * 0.45;
+    let li = 0;
+
     for (let i = 0; i < pts.length; i++) {
       for (let j = i + 1; j < pts.length; j++) {
         const dx = pts[i].x - pts[j].x;
         const dy = pts[i].y - pts[j].y;
         const d  = Math.hypot(dx, dy);
-        const maxD = Math.max(W, H) * 0.3;
-        if (d > maxD) continue;
-        const alpha = (1 - d / maxD) * 0.35;
-        ctx.beginPath();
-        ctx.moveTo(pts[i].x, pts[i].y);
-        ctx.lineTo(pts[j].x, pts[j].y);
-        ctx.strokeStyle = `rgba(80, 80, 76, ${alpha})`;
-        ctx.stroke();
+        const line = lines[li++];
+        if (d > maxD) {
+          line.setAttribute('stroke-opacity', '0');
+        } else {
+          const alpha = (1 - d / maxD) * 0.35;
+          line.setAttribute('x1', pts[i].x);
+          line.setAttribute('y1', pts[i].y);
+          line.setAttribute('x2', pts[j].x);
+          line.setAttribute('y2', pts[j].y);
+          line.setAttribute('stroke-opacity', alpha);
+          line.setAttribute('stroke-width', strokeW);
+        }
       }
     }
 
     t++;
     requestAnimationFrame(draw);
   }
+
+  init();
   draw();
 })();
